@@ -27,7 +27,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     //-----------------------metodos---------------------------------
     @Override
-    public Usuario singUpRequest(SingUpRequest signUpRequest) {
+    public Usuario singUpUser(SingUpRequest signUpRequest) {
         Usuario usuario = getUsuarioEntity(signUpRequest);
         usuario.setRoles(Collections.singleton(getRoles(Role.USER)));
         return usuarioRepository.save(usuario);

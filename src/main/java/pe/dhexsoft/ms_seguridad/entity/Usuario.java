@@ -1,6 +1,7 @@
 package pe.dhexsoft.ms_seguridad.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Setter
 @Getter
+@Builder
 @Table(name = "usuario")
 public class Usuario {
 

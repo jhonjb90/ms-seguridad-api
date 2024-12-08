@@ -8,7 +8,7 @@ import java.util.List;
 public interface AuthenticationService {
 
     //SIGNUP --> REGISTRARSE
-    Usuario SingUpRequest(SingUpRequest signUpRequest);
+    Usuario singUpRequest(SingUpRequest signUpRequest);
 
     Usuario singUpAdmin(SingUpRequest signUpRequest);
 

@@ -1,18 +1,19 @@
 package pe.dhexsoft.ms_seguridad.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
+
 
 @Entity
 @Setter
 @Getter
 @Builder
-@Table(name = "usuario")
+@Table(name = "usuarios")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 
     @Id
@@ -31,7 +32,8 @@ public class Usuario {
 
     //relacion de mucho a muchos
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "id_usuario"),
+    @JoinTable(name = "usuario_rol",
+    joinColumns = @JoinColumn(name = "id_usuario"),
     inverseJoinColumns = @JoinColumn(name = "id_rol"))
     private Set<Rol> roles = new HashSet<>();
 
